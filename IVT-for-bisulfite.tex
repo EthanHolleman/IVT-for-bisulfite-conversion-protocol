@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}	% Para caracteres en español
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{multirow,booktabs}
+\usepackage[table]{xcolor}
+\usepackage{fullpage}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{calc}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage[T1]{fontenc} 
+%\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[margin=3cm]{geometry}
+\usepackage{amsmath}
+\newlength{\tabcont}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+\usepackage{empheq}
+\usepackage{framed}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\colorlet{shadecolor}{orange!15}
+\parindent 0in
+\parskip 12pt
+\usepackage[T1]{fontenc}
+
+ \renewcommand{\familydefault}{\sfdefault}
+\geometry{margin=1in, headsep=0.25in}
+\theoremstyle{definition}
+
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+}
+
+\begin{document}
+\title{
+	\textbf{\emph{In vitro} transcription for bisulfite conversion}\\
+	\large Adapted from \emph{Malig et al, 2020}}
+
+\author{Ethan Holleman}
+\maketitle
+
+
+\section*{Protocol}
+
+\subsection*{IVT}
+
+\begin{enumerate}
+
+\item Determine reaction volume and DNA mass per plasmid. This will be dependent on
+what intended use for the IVT products is, and the number of reactions per plasmid. Generally, a complete IVT to demonstrate R-loop formation (or lack thereof) via band shift on an agarose gel will have three samples per plasmid; an untranscribed control, a transcribed RnaseH treated and a transcribed untreated. A minimum of 200 ng per sample should be used in order to visualize on an agarose gel.
+
+\item After determining reagent volumes for each sample, assemble reagents for each sample in the following order; npH$_{2}$0, 10X reaction buffer, NTPs, template DNA. This will serve as a master mix for all reactions utilizing a particular template DNA.\footnote{It can be helpful when dealing with many samples to prepare reactions in a PCR grid. This way the main mix can be created in one well and individual reactions can be split from the main mix into spacial related wells using a multichannel pipette.}
+
+\item Split each sample into individual reactions (typically 2 to 3) of equal volume.
+
+\item Add the appropriate polymerase for your template DNA (usually T7 or T3). 2 $\mu$l is suitable for up to 1 $\mu$g of DNA.\footnote{If larger masses of DNA are used, NEB's \href{https://www.neb.com/protocols/2015/03/09/protocol-for-standard-rna-synthesis}{Protocol for Standard RNA Synthesis} can be scaled up and used as a guide.}
+
+\item Incubate all samples at 37$^{\circ}$ C for 20 minutes in a thermocycler.\footnote{Make sure an aliquote of EDTA is ready after you start the incubation.}
+
+\item Immediately remove samples and place on ice. Add EDTA to all samples.\footnote{Final EDTA concentration should be 5x the concentration of Mg in the transcription buffer. NEB 10x transcription buffer contains 6 mM MgCl$_{2}$.}
+
+\item Thoroughly mix samples and place on ice for 5 minutes.
+
+\subsection*{Phenol / EtOH precipitation}
+
+\item Increase sample volume to 200 $\mu$l with TE or 10 mM Tris HCl.
+
+\item Spin down phase lock gel tube at 12,000 x g for 30 seconds. Add 200 $\mu$l Phenol:Chloroform:Isoamyl Alcohol (25:24:1, v/v) (1 volume) to the tube.
+
+\item Add sample to phase lock tube and vortex until contents are thoroughly mixed. 
+
+\item Centrifuge at 12,000 x g for 5 minutes to separate phases.
+
+\item Carefully pipet off nucleic-acid-containing aqueous phase (upper layer) to a fresh tube.
+
+\item Preform standard EtOH precipitation (\href{https://openwetware.org/wiki/Ethanol_precipitation_of_nucleic_acids}{OpenWetWare} has a usefuly guide with images). Add 0.1 volumes 3M sodium acetate pH 5.2, 2.2 volumes 100\% EtOH and 2 $\mu$l molecular grade glycogen to each sample. Freeze samples occording to your needs. Generally, the lower the concentration of
+DNA the greater benefit of longer freezing times. If maximum yield is required freeze overnight at -20$^{\circ}$C, if time is a
+greater constraint freeze at -80$^{\circ}$ for 10 minutes to 1 hour.
+
+\item Spin at full speed in microcentrifuge at 4$^{\circ}$ for 30 minutes. 
+
+\item Carefully vacuum supernatant away. Wash twice with 200 $\mu$l 70\% EtOH. It can be helpful to spin samples briefly between washes to secure the pellet as it can sometimes be dislodged during the wash. Carefully vacuum away the 70\% EtOH
+between each wash.
+
+\item Air dry pellet for 20-30 minutes.
+
+\item Re-suspend pellet in desired volume of 10 mM Tris HCl. This will be dependent on downstream use of the sample.
+
+\subsection*{Visualize via agarose gel}
+
+\item Prepare a 0.8\% 1x TBE agarose gel. Cover in 1x TBE. Do not add ethidium bromide to the gel or running buffer. 
+
+\item Aliquote 200-600 ng of each sample into a PCR tube. Increase to suitable volume (usually between 10 and 20 $\mu$l depending on well size) and add appropriate amount of loading dye. 
+
+\item Run gel at max 60V for minimum time of 2 hours.
+
+\item Post stain gel for 1 hour with ethidium bromide at a concentration of 1 $\mu$l ethidium bromide per 100 ml running buffer. 
+
+\item De-stain the gel for 10 minutes in np water.
+
+\item Image the gel and record results.
+
+
+
+
+\end{enumerate}
+
+
+\end{document}
+
